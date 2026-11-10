@@ -162,7 +162,10 @@ html.locked #gate{display:flex}
 #gate .property-link .property-tag{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}
 #gate .property-link .property-detail{font-size:.85rem;color:var(--muted)}
 #gate .property-link .property-action{font-size:.8rem;font-weight:600;color:var(--muted);margin-top:4px}
-#gate a.property-link:hover{border-color:var(--orange)}
+#gate .property-photo{aspect-ratio:16/9;border-radius:9px;background:var(--bg);border:1px dashed var(--line);display:grid;place-items:center;overflow:hidden;color:var(--muted);font-size:.85rem;text-align:center}
+#gate .property-photo img{width:100%;height:100%;object-fit:cover;display:block}
+#gate .property-cta{justify-self:start;display:inline-flex;text-decoration:none;margin-top:6px}
+#gate .property-cta:hover{filter:brightness(.95)}
 #gate .gate-contact{display:grid;gap:8px;justify-items:center;text-align:center}
 #gate .gate-contact p{margin:0;color:var(--muted);font-size:.85rem}
 #gate .gate-contact a{text-decoration:none}
@@ -175,18 +178,29 @@ html.locked #gate{display:flex}
     <h1 id="propertiesTitle">Encontre seu próximo apê</h1>
     <p>Conheça os empreendimentos em Franca</p>
     <div class="property-links">
-      <!-- Para ativar cada destaque, troque a div por a, mantenha a classe e adicione href="URL_DA_PAGINA". -->
       <div class="property-link" id="linkParqueSul">
+        <div class="property-photo">
+          <!-- FOTO PRINCIPAL: substitua o span abaixo por esta imagem, retirando os marcadores de comentário:
+          <img src="./ParqueSul/imagens/foto-principal.jpg" alt="Vitta Parque Sul" loading="lazy">
+          -->
+          <span>Espaço para a foto principal</span>
+        </div>
         <span class="property-tag">Em destaque</span>
         <strong>Vitta Parque Sul</strong>
         <span class="property-detail">Ao lado da UNIFRAN</span>
-        <span class="property-action">Página em breve</span>
+        <a class="btn property-cta" href="./ParqueSul/" aria-label="Confira o Vitta Parque Sul">Confira</a>
       </div>
       <div class="property-link" id="linkSaoVicente">
+        <div class="property-photo">
+          <!-- FOTO PRINCIPAL: substitua o span abaixo por esta imagem, retirando os marcadores de comentário:
+          <img src="./SaoVicente/imagens/foto-principal.jpg" alt="Vitta São Vicente" loading="lazy">
+          -->
+          <span>Espaço para a foto principal</span>
+        </div>
         <span class="property-tag">Conheça também</span>
         <strong>Vitta São Vicente</strong>
         <span class="property-detail">Franca · SP</span>
-        <span class="property-action">Página em breve</span>
+        <a class="btn property-cta" href="./SaoVicente/" aria-label="Confira o Vitta São Vicente">Confira</a>
       </div>
     </div>
     <button class="btn" type="button" id="openCli" style="justify-self:center">Simulação para clientes</button>
